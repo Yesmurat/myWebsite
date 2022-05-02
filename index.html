@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <p>This is your space to practice, get creative, and build your own projects from scratch.</p>
+
+  <div id="app">
+    <h2>Hello, {{ username }}</h2>
+    <h3>Hello, {{ me }}</h3>
+    <h1>My hobbies</h1>
+    <ul id="hobbies">
+      <li v-for="hobby in hobbieList">{{ hobby }}</li>
+    </ul>
+
+<div>
+  <button v-if="userIsLoggedIn" v-on:click="hobbieList.pop()">
+    Log out
+    </button>
+  <button v-if="!userIsLoggedIn" v-on:click="username = names[Math.floor(Math.random() * 6)]"> Log in </button>
+</div>
+
+  </div>
+
+</body>
+</html>
